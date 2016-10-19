@@ -1,0 +1,19 @@
+h1 {
+  color: #008000;
+}
+p {
+  color: #00f;
+}
+body {
+  margin: 10%;
+}
+#menubtn {
+  margin-top: 15px;
+  background-color: #337ab7;
+}
+#menuicon {
+  color: #fff;
+}
+.cast-btn {
+  background-color: #337ab7;
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NW Vue Boilerplate</title>
+
+    <link href="./static/css/main.css" rel="stylesheet" type="text/css">
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div id="app" class="container">
+	    <button id="menubtn"
+		class="btn"
+		@click="showMenu = true">
+			<span id="menuicon" class="glyphicon glyphicon-menu-hamburger"></span>
+		</button>
+
+		<sidebar :show.sync="showMenu" placement="right" header="Title" :width="350">
+		...
+		</sidebar>
+    	<div class="row">
+    		<div class="col-sm-12">
+				<h1 class="text-center">Castnow Webserver!</h1>
+			</div>
+			<div class="col-sm-12">
+				<bs-input :value.sync="casturl" type="text" placeholder="URL" class="casturl"></bs-input>
+			</div>
+			<div class="col-sm-12 text-center">
+				<v-select :value.sync="params" :options="options" options-value="val" multiple justified required clear-button></v-select>
+				<button type="submit" v-on:click="cast" class="btn btn-default cast-btn">Cast!</button>
+			</div>
+		</div>
+	</div>
+	<script src="./static/js/vue.js"></script>
+    <script src="./static/js/vue-strap.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+	<script src="./static/js/app.js"></script>
+</body>
+</html>
